@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 
 const links = [
-  { label: 'About',        href: '#about' },
-  { label: 'Skills',       href: '#skills' },
-  { label: 'Experience',   href: '#experience' },
-  { label: 'Projects',     href: '#projects' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Certificates', href: '#certifications' },
-  { label: 'Exploring',    href: '#exploring' },
-  { label: 'Contact',      href: '#contact' },
+  { label: 'Exploring', href: '#exploring' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
-  const [active, setActive]     = useState('')
-  const [menuOpen, setMenu]     = useState(false)
+  const [active, setActive] = useState('')
+  const [menuOpen, setMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function Navbar() {
           <li key={l.href}>
             <a href={l.href}
               className={`text-[0.78rem] font-semibold tracking-widest uppercase transition-colors duration-200
-                ${active === l.href.slice(1) ? 'text-gold' : 'text-white/70 hover:text-gold'}`}>
+                ${active === l.href.slice(1) ? 'text-amber-300' : 'text-amber-300/70 hover:text-gold'}`}>
               {l.label}
             </a>
           </li>
@@ -88,8 +88,8 @@ export default function Navbar() {
 
             {/* ✅ FIXED — <a tag was missing here too */}
             <li>
-              
-                <a href="/Kaushalya_TJ_Resume.pdf"
+
+              <a href="/Kaushalya_TJ_Resume.pdf"
                 download="Kaushalya_TJ_Resume.pdf"
                 onClick={() => setMenu(false)}
                 className="flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-accent hover:text-gold transition-colors"
